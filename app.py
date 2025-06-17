@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 import os
 
-client = OpenAI(api_key=st.secrets["zuleycacalderonc"])
+client = OpenAI(api_key=st.secrets["openai_api_key"])
 
 st.set_page_config(page_title="Asistente Escolar", page_icon="📘")
 st.title("📘 Asistente Escolar con IA")
@@ -23,5 +23,3 @@ if st.button("Responder"):
             st.success(respuesta.choices[0].message.content)
     else:
         st.warning("Por favor, escribe una pregunta.")
-
-
